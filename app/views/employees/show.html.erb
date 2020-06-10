@@ -1,0 +1,13 @@
+
+    <h1><%= "#{@employee.first_name} #{@employee.last_name}" %></h1><br>
+    <%= image_tag "#{@employee.img_url}" %><br>
+    
+   <h3> Alias: <%= @employee.alias %></h3>
+   <h3> Title: <%= @employee.title %></h3>
+   <h3> Office: <%= @employee.office %></h3>
+
+
+   <%= button_to "Delete #{@employee.first_name}", employee_path(@employee), method: :delete %> 
+    
+
+    <%= link_to "BACK TO INDEX", employees_path %>
