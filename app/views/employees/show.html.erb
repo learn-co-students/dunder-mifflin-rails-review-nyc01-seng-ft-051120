@@ -1,0 +1,11 @@
+<h1>Employee:</h1>
+
+<%= image_tag @employee.img_url %><br><br><br>
+
+<h3>Name: <%= @employee.to_s %></h3>
+<p>Alias: <%= @employee.alias %></p>
+<p>Title: <%= @employee.title %></p>
+<p>Office: <%= @employee.office %></p>
+<p>Dog: <%= @employee.dog.name %></p><br><br>
+
+<%= link_to "All Employees", employees_path %>
