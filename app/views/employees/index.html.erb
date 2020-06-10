@@ -1,0 +1,5 @@
+<div><% @employees.each do |v| %></div>
+<div><%= link_to v.first_name, employee_path(v)%> </div><br>
+
+<% end%>
+<div><%= link_to "New employee", new_employee_path %></div>

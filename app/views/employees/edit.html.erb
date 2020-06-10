@@ -1,0 +1,30 @@
+<h4>Welcome to Edit an employee</h4>
+<% if flash[:employee_errors]%>
+<% flash[:employee_errors].each do |v|%>
+<p><%= v %></p>
+<% end%>
+<% end%>
+<%= form_for @employee do |v| %>
+<%= v.label :first_name  %>
+<%= v.text_field :first_name %><br>
+
+<%= v.label :last_name  %>
+<%= v.text_field :last_name %><br>
+
+<%= v.label :alias %>
+<%= v.text_field :alias %><br>
+
+<%= v.label :title %>
+<%= v.text_field :title %><br>
+
+<%= v.label :office %>
+<%= v.text_field :office %><br>
+
+<%= v.label :img_url %>
+<%= v.text_field :img_url %><br>
+
+<%= v.label :dog_id %>
+<%= v.collection_select :dog_id, @dogs, :id, :name %><br>
+
+<%= v.submit %>
+<% end%>

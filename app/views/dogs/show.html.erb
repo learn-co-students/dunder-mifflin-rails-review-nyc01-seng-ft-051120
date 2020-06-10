@@ -1,0 +1,7 @@
+<h4><%= @dog.name %></h4>
+<div><%= @dog.breed %></div>
+<div><%= @dog.age %></div><br>
+<div><% @dog.employees.each do |v| %></div>
+<% @to_employee = @dog.employees.find(v.id)%>
+<div>this dog has a Relationship with :<%= link_to @to_employee.first_name, employee_path(@to_employee) %></div><br>
+<% end%>
