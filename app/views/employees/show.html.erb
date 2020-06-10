@@ -1,0 +1,10 @@
+<% if @employee.img_url %>
+<%= image_tag(@employee.img_url) %>
+<% end %>
+<h1><%= @employee.first_name%> <%=@employee.last_name %></h1>
+<div><%= @employee.alias %></div>
+<div><%= @employee.title %></div>
+<div><%= @employee.office %> office</div>
+<%= link_to @employee.dog.name, dog_path(@employee.dog.id) %><br>
+
+<%= link_to 'Need to edit something?', edit_employee_path(@employee.id)%>
