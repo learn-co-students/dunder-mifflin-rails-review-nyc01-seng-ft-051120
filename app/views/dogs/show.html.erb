@@ -1,0 +1,11 @@
+<hr color='red'>
+<h1><%=@dog.name%></h1><br>
+<hr color='red'>
+<ol><h3>
+<u>Age:</u> <%=@dog.age%><br>
+<u>Breed:</u> <%=@dog.breed%><br>
+<u>Owners: <% @dog.employees.each do |e| %>
+</u><li><%=e.first_name%> <%=e.last_name%><br></li> 
+<% end %>
+
+
