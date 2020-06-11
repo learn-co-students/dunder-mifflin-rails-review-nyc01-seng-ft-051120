@@ -1,0 +1,37 @@
+<hr color='red'>
+<h1>Create Employee</h1>
+<hr color='red'>
+<% if flash[:errors] %>
+<ul>
+<%flash[:errors].each do |error|%>
+<li> <%=error%> </li>
+  
+<%end %>
+</ul>
+<% end %>
+
+
+
+<%= form_for @employee do |f| %>
+<%=f.label :"First Name: "%><br>
+<%=f.text_field :first_name%><br>
+
+<%=f.label :"Last Name: "%><br>
+<%=f.text_field :last_name%><br>
+
+<%=f.label :"Alias: "%><br>
+<%=f.text_field :alias%><br>
+
+<%=f.label :"Title: "%><br>
+<%=f.text_field :title%><br>
+
+<%=f.label :"Office: "%><br>
+<%=f.text_field :office%><br>
+
+<%=f.label :"Image URL: "%><br>
+<%=f.text_field :img_url%><br> 
+Selec A Dog: <br>
+<%= f.collection_select :dog_id, @dogs, :id, :name%><br>
+<p>
+<%= f.submit %>
+<% end %>
