@@ -1,0 +1,12 @@
+<h1> Show Page</h1>
+
+<p> <%= @employee.to_s %></p>
+<p> <%= @employee.alias %></p>
+<p> <%= @employee.title %></p>
+<p> <%= @employee.office %></p>
+<p> <%= @employee.dog_id %></p>
+<p> <%= image_tag @employee.img_url %></p>
+
+<%= link_to 'INDEX', employees_path %><br>
+
+<%= link_to 'EDIT', edit_employee_path(@employee) %><br>
