@@ -1,0 +1,17 @@
+<h1> Show Page</h1>
+
+<p> Name: <%= @dog.name %> </p>
+<p> Breed: <%= @dog.breed %> </p>
+<p> Age: <%= @dog.age %> </p>
+
+
+<h1>The list of Dunder Mifflin Employees</h1>
+
+<ul>
+<% @dog.employees.each do |employee| %>
+    <li> <%= employee.to_s %> </li>
+<% end %>
+</ul>
+
+<%= link_to 'INDEX', dogs_path %><br>
+
