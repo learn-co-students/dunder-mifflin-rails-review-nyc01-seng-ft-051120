@@ -1,0 +1,9 @@
+<h1><%=@dog.name%></h1>
+<h3>Breed: <%=@dog.breed%></h3>
+<h3>Age: <%=@dog.age%></h3> 
+
+<ul>
+  <%@dog.owners.each do |owner|%>
+    <li><%= link_to  "#{owner.first_name} #{owner.last_name}", owner %></li>
+  <%end%>
+<ul>
